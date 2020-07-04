@@ -1,0 +1,137 @@
+level 0:
+https://overthewire.org/wargames/bandit/bandit0.html
+so we need to use ssh command to start
+to ways to use ssh 
+first: ssh username@hostname -p portname
+seconed : ssh hostname -l username -p portname
+then the password bandit0
+
+$ ls
+we have readme
+$ cat readme
+now we got the pass to level one
+
+exit 
+then connet to level 1 with ssh
+
+level 1:
+https://overthewire.org/wargames/bandit/bandit1.html
+
+$ ls -alps
+now we have a file called -
+so to open it with cat
+$ cat ./-
+so we got the pass to the level 2
+
+exit and connect to level 2
+
+level 2:
+https://overthewire.org/wargames/bandit/bandit2.html
+
+$ ls -alps
+now we have a file called spaces in this file
+to read this file with space using cat
+$ cat 'spaces in this filename'
+so we got the pass to the level 3
+
+exit and connect to level 3
+
+level 3:
+https://overthewire.org/wargames/bandit/bandit3.html
+$ ls -alps
+now we have directory called inhere
+$ cd inhere
+when you use ls only you got nothing you need to use ls -alps
+$ ls -alps
+now we got .hidden
+$ cat .hidden
+and we got the pass to lvel 4
+
+exit and connect to level 4
+
+level 4:
+https://overthewire.org/wargames/bandit/bandit4.html
+$ ls -alps
+now we got inhere again
+$ cd inhere
+$ ls -alps
+now we have a lot of files to read
+but I couldn`t read it directly with cat each file has - before it 
+so we need to read the file as a path
+back to the home
+$ cd -
+$ cat /home/bandit4/inhere/-file00
+now we have something but it`s not as text and it`s not what we want so we wan to read all the file in the directory but it will take sometime
+so to do it in a short way
+$find /home/bandit4/inhere |xargs file|grep text
+the command told us there is an ASCII text inside the -file07
+now use cat
+$ cat /home/bandit4/inhere/-file07
+we got the pass to level 5
+
+exit and connect to level 5
+
+level 5:
+https://overthewire.org/wargames/bandit/bandit6.html
+we have 3 options in the file
+$ find -size size 1033c
+we got the path to file for example what we got xx/xx/xx
+$ cat xx/xx/xx
+and we got the pass to level 6
+
+exit and connect to level 6
+
+level 6:
+https://overthewire.org/wargames/bandit/bandit7.html
+now we have to use ls -alps
+$ ls -alps
+$ cd ../    ##we got ../ to be in home dirctory
+tried to find file by its username
+$ find / -user bandit7
+we got a lot of files , let`s dig some of it we will get one between them which the pass is there
+$ cat the file
+we got the pass to level 7
+
+exit and conncet to level 7
+
+
+## with some search on google we can use this line also to specify the 3 properties of the file
+$ find / -type f -user bandi7 -group bandit6 -size 33c
+
+level 7:
+https://overthewire.org/wargames/bandit/bandit8.html
+we gonna use grep: The grep utility searches for lines which contain a search patter
+$ grep [the pattren we have] *.txt
+
+ *.txt ## mean that we search in all text files in the current directory.
+so we got the pass to level 8
+##here is another way using strings##
+##$ strings data.txt |grep "pattren here" ##
+
+exit and conncet to level 8
+
+level 8:
+https://overthewire.org/wargames/bandit/bandit9.html
+
+$ ls -alps
+now we have data.txt and we need to find the text that occure only once
+$ sort data.txt
+then we can search by eye on the text that only occur one but that will take some time if the file is big
+so we use another way we combine sort with uniq
+$ sort data.txt | uniq -c 
+where -c is to count 
+we got the pass to level 9
+
+exit and connect to level 9
+
+level 9:
+https://overthewire.org/wargames/bandit/bandit10.html
+
+$ ls -alps
+also we have data.txt
+$ strings data.txt |grep "==" 
+we got the pass to level 10
+
+exit and connect to level 10
+
+level 10:
