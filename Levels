@@ -166,3 +166,21 @@ level is stored in the file data.txt, which is a hexdump of a file that has been
 better to watch this vid >> youtube.com/watch?v=n4tROT45ipU&list=PLBf0hzazHTGOIn_vuuuCzRFVhYiDBnJID&index=3
 
 level 13:
+https://overthewire.org/wargames/bandit/bandit14.html
+we have a localhost to the level 14 where the pass is there , so we use ssh
+ssh -i identiyfile username@localhost 
+$ ssh -i sshkey.private bandit14@localhost
+now we are in bandit14
+read there file mentioned in the link
+$ cat
+we got the pass
+
+Level 14:
+https://overthewire.org/wargames/bandit/bandit15.html
+we gonna use netcat here to access to the network on port 3000
+$ nc localhost 3000
+enter the pass for the level 14
+now we got the pass
+
+level 15:
+
