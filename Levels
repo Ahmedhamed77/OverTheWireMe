@@ -160,4 +160,9 @@ we got the pass to level 12
 exit and connect to level 12
 
 level 12:
+https://overthewire.org/wargames/bandit/bandit13.html
+level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed
 
+better to watch this vid >> youtube.com/watch?v=n4tROT45ipU&list=PLBf0hzazHTGOIn_vuuuCzRFVhYiDBnJID&index=3
+
+level 13:
