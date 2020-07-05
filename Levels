@@ -135,3 +135,29 @@ we got the pass to level 10
 exit and connect to level 10
 
 level 10:
+https://overthewire.org/wargames/bandit/bandit11.html
+$ ls -alps
+we have data.txt encoded
+we gonna use base64 to encode the date
+$ cat data.txt | base64 -d
+we got the pass to level 11
+
+exit and conncet to level 11
+
+level 11:
+https://overthewire.org/wargames/bandit/bandit12.html
+$ ls -alps
+we have data.txt
+but lettters have been rotated by 13 positions
+so we gonna used tr command
+$cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+or we can use this site https://gchq.github.io/CyberChef/
+so we can see the pass
+
+we got the pass to level 12 
+
+exit and connect to level 12
+
+level 12:
+
